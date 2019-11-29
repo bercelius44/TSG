@@ -1,0 +1,171 @@
+<div class = "container">
+  <div class = "jumbotron">
+    <h1 class="display-3">TSG ADMINISTRACIÓN DE RECURSOS</h1>
+  </div>
+</div>
+
+<div class = "container">
+    <h4 class="display-5">REGISTRO, ELIMINACIÓN Y ACTUALIZACIÓN DE RESPONSABLES Y RECURSOS</h4>
+</div>
+
+<div class = "container">    
+  <div class="row">
+    <div class="col-4">
+        <div class="card text-white bg-secondary mb-3" style="max-width: 25rem;">
+            <div class="card-header">
+              <h4 class="card-title">Registrar responsable</h4>        
+            </div>
+            <div class="card-body">
+              <div class="form-group">
+                <label class="col-form-label" for="inputDefault">Nombre responsable</label>
+                <input type="text" class="form-control" id="inputDefault" [(ngModel)] = "selectedResponsable.nombre">
+              </div>
+      
+              <div class="form-group">
+                <label class="col-form-label" for="inputDefault">Telefono responsable</label>
+                <input type="text" class="form-control" id="inputDefault" [(ngModel)] = "selectedResponsable.telefono" >
+              </div>
+      
+              <div class="form-group">
+                <label class="col-form-label" for="inputDefault">Tipo de responsable</label>
+                <input type="text" class="form-control" id="inputDefault" [(ngModel)] = "selectedResponsable.tipo">
+              </div>
+              
+              <div class="row">
+                <div class="col-4">
+                    <button type="button" class="btn btn-primary" (click)="createResponsable()" >Registrar</button>
+                </div>
+                <div class="col-4">
+                    <button type="button" class="btn btn-primary" >Eliminar</button>
+                </div>
+                <div class="col-4">
+                    <button type="button" class="btn btn-primary" (click)="updateResponsable()">Actializar</button>
+                </div>
+
+              </div>
+                      
+            </div>      
+        </div> 
+    </div>
+
+    <div class="col-8">
+      <div class="card text-white bg-secondary mb-3" style="max-width: 80rem;">
+
+        <div class="card-header">
+            <h4 class="card-title">Registrar recurso</h4> 
+        </div>
+
+        <div class="card-body">
+          <div class = "row">
+              <div class = "col-4">
+                  <div class="form-group">
+                    <label class="col-form-label" for="inputDefault">Serial recurso</label>
+                    <input type="text" class="form-control" id="inputDefault" [(ngModel)] = "selectedResource.serial">
+                  </div>
+      
+                  <div class="form-group">
+                    <label class="col-form-label" for="inputDefault">Id encargado</label>
+                    <input type="text" class="form-control" id="inputDefault" [(ngModel)] = "selectedResource.id_encargado">
+                  </div>
+      
+                  <div class="form-group">
+                    <label class="col-form-label" for="inputDefault">Marca</label>
+                    <input type="text" class="form-control" id="inputDefault" [(ngModel)] = "selectedResource.marca">
+                  </div>
+              </div> 
+
+              <div class = "col-4">
+                  <div class="form-group">
+                    <label class="col-form-label" for="inputDefault">Tipo</label>
+                    <input type="text" class="form-control" id="inputDefault" [(ngModel)] = "selectedResource.tipo">
+                  </div>
+      
+                  <div class="form-group">
+                    <label class="col-form-label" for="inputDefault">Proveedor</label>
+                    <input type="text" class="form-control" id="inputDefault" [(ngModel)] = "selectedResource.proveedor">
+                  </div>
+      
+                  <div class="form-group">
+                    <label class="col-form-label" for="inputDefault">Valor comercial</label>
+                    <input type="text" class="form-control" id="inputDefault" [(ngModel)] = "selectedResource.valor_comercial">
+                  </div>
+              </div> 
+
+              <div class = "col-4">
+                  <div class="form-group">
+                    <label class="col-form-label" for="inputDefault">Fecha de compra</label>
+                    <input type="text" class="form-control" id="inputDefault" [(ngModel)] = "selectedResource.fecha_compra">
+                  </div>
+      
+                  <div class="form-group">
+                    <label class="col-form-label" for="inputDefault">Estado</label>
+                    <input type="text" class="form-control" id="inputDefault" [(ngModel)] = "selectedResource.estado">
+                  </div>
+      
+                  <div class="form-group">
+                    <label class="col-form-label" for="inputDefault">Fecha de asignación</label>
+                    <input type="text" class="form-control" id="inputDefault" [(ngModel)] = "selectedResource.fecha_asignacion">
+                  </div>
+              </div> 
+
+          </div>
+          
+          <div class="row">
+            <div class="col-2">
+                <button type="button" class="btn btn-primary" (click)="createResource()">Registrar</button>
+            </div>
+            <div class="col-2">
+                <button type="button" class="btn btn-primary">Eliminar</button>
+            </div>
+            <div class="col-2">
+                <button type="button" class="btn btn-primary">Actializar</button>
+            </div>
+
+          </div>
+           
+        </div>
+      </div>
+    </div>      
+  </div>
+</div>
+
+<div class = "container">
+    <h4 class="display-5">VISUALIZACIÓN RESPONSABLES Y RECURSOS</h4>
+</div>
+
+
+
+<div class = "container">
+  <div class = "jumbotron">
+    <h2>Lista de responsables</h2>    
+  </div>
+
+  <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Telefono</th>
+          <th scope="col">Tipo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="table-active">
+          <th scope="row">Active</th>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+        </tr>
+      </tbody>
+    </table> 
+
+  <!-- <div class = "panel-body"> 
+      <hr>
+      Nombre <input type= "text" [(ngModel)] = "selectedResponsable.nombre" /><br>
+      Telefono <input type= "text" [(ngModel)] = "selectedResponsable.telefono" /><br>
+      Tipo <input type= "text" [(ngModel)] = "selectedResponsable.tipo" /><br>
+      <button (click)="createResponsable()">POST</button>
+      <button *ngIf = "selectedResponsable.id != -1" >PUT</button>
+      <button *ngIf = "selectedResponsable.id != -1" (click)="deleteResponsable()">DELETE</button>
+  </div> -->
+</div>
