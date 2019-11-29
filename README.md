@@ -21,7 +21,7 @@ Instrucciones:
 
 Ir a la carpeta django/restServices/restService y modificar el archivo setings.py con los respectivos datos de la base de datos Postgresql (modificar: NAME, USER, PASSWORD, HOST, PORT):
 
--DATABASES = { 
+- DATABASES = { 
   'default': { 
       'ENGINE': 'django.db.backends.postgresql', 
       'NAME': 'TSG', 
